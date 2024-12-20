@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O yeah a gift!🎁</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Fullscreen Pop-up -->
+    <div id="popup" class="popup">
+        <h2>Click anywhere to start</h2>
+    </div>
+
+    <!-- Sanrio Characters -->
+    <img src="images/Cinnamoroll.png" class="sanrio left" id="Cinnamoroll" alt="Cinnamoroll">
+    <img src="images/Mymelody.png" class="sanrio left" id="Mymelody" alt="Mymelody">
+    <img src="images/Pompompurin.png" class="sanrio left" id="Pompompurin" alt="Pompompurin">
+
+    <img src="images/Keroppi.png" class="sanrio right" id="Keroppi" alt="Keroppi">
+    <img src="images/Kuromi.png" class="sanrio right" id="Kuromi" alt="Kuromi">
+    <img src="images/tt.png" class="sanrio right" id="tt" alt="tt">
+
+    <!-- Video Container -->
+<div id="videoPopup" style="display: none;">
+    <video id="cinnamorollVideo" width="600" controls>
+        <source src="Presentation2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="closeVideoButton">Close</button>
+</div>
+
+    <h1 style="margin-top: -400px;">Welcome Miruna</h1>
+
+    <!-- EVIL GIFT -->
+    <img src="666.gif" class="satan-gif" id="Satan" alt="Satan">
+
+    <!-- Modal Box -->
+<div id="giftModal" class="modal">
+  <div class="modal-content">
+    <p>Did you find your first gift? If yes, you can press the NEXT GIFT button to continue, if not yet, then close this box and come back later.</p>
+    <div class="modal-buttons">
+      <button id="closeModal">Close</button>
+      <button id="nextGift">NEXT GIFT</button>
+    </div>
+  </div>
+</div>
+
+    <!-- Ringing Phone GIF -->
+    <img src="phone-ringing.gif" alt="Phone Ringing" class="phone-gif" id="phone">
+
+    <!-- Still Phone Image (Initially Hidden) -->
+    <img src="phone-still.png" alt="Phone Still" class="phone-still" id="phoneStill" style="display: none;">
+
+    <!-- Hello Kitty GIF (Initially Hidden) -->
+    <img src="hello_kitty.gif" alt="hello_kitty" class="hello_kitty" id="hello_kitty" style="display: none;">
+
+    <!-- Keychain GIF (Initially Hidden) -->
+    <img src="keychain.gif" alt="keychain" class="keychain" id="keychain" style="display: none;">
+
+    <!-- Hear Rain GIF -->
+    <div id="heart_rain" class="heart_rain"></div>
+
+    <!-- Audio for the ringing sound -->
+    <audio id="ringtone" loop>
+        <source src="phone-ringing.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Audio for the background music -->
+    <audio id="cute_music" loop>
+        <source src="Banana_Shake.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+<!-- Custom Pop-up Box for Caller Message -->
+    <div id="callerMessageBox" class="caller-message-box">
+        <p id="callerMessageText">Hi Miruna, I saw your keychain—it’s so cute!</p>
+        <button id="closeMessageBox">Close</button>
+    </div>
+</div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

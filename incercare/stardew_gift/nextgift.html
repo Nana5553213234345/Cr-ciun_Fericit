@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O yeah another gift!🎁</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Fullscreen Pop-up -->
+    <div id="popup" class="popup">
+        <h2>Click anywhere to start</h2>
+    </div>
+
+    <!-- Petals GIF -->
+    <div id="petals" class="petals"></div>
+
+    <!-- Flute GIF -->
+    <div id="flute" class="flute"></div>
+
+    <!-- Dance GIF -->
+    <div id="dance" class="dance"></div>
+
+    <!-- Audio -->
+    <audio id="Abigail" loop>
+        <source src="Abigail.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <!-- CAT GIF -->
+    <img src="next_button.gif" class="next_button" id="next_button" alt="next_button">
+
+    <!-- Modal Box -->
+<div id="giftModal" class="modal">
+  <div class="modal-content">
+    <p>Did you find your second gift? If yes, you can press the NEXT GIFT button to continue, if not yet, then close this box and come back later.</p>
+    <div class="modal-buttons">
+      <button id="closeModal">Close</button>
+      <button id="nextGift">NEXT GIFT</button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Avatar image -->
+    <img id="avatar" class="avatar" src="avatar0.png" alt="Avatar">
+
+    <!-- Loading image -->
+    <img id="loading" class="loading" src="loading0.png" alt="Loading">
+
+    <!-- Upload buttons container -->
+    <div id="upload-container" class="upload-container">
+        <img id="upload1" class="upload" src="upload1.png" alt="Upload 1">
+    </div>
+
+    <!-- Hidden video -->
+    <div id="video-container" class="video-container hidden">
+        <video id="video" controls>
+            <source src="stardew_valley.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="close-video" class="close-button">Close</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+

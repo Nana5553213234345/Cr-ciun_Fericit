@@ -1,0 +1,252 @@
+/* Global body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('backg.png'); /* Replace with your background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Petals GIF container */
+.petals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('petals.gif'); /* Replace with your petals GIF path */
+    background-size: cover; /* Make sure the GIF covers the screen */
+    background-repeat: no-repeat; /* Prevent repeating the GIF */
+    background-position: center center; /* Center the GIF */
+    z-index: 9995; /* Below the pop-up but above the background */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+/* Pop-up styling (unchanged, remains above petals) */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 18888; /* Above petals */
+    cursor: pointer;
+}
+
+
+
+/* Flute GIF in the bottom right corner */
+.flute {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    background-image: url('flute.gif'); /* Replace with your flute GIF path */
+    background-size: contain; /* Make sure the GIF covers the screen */
+    background-repeat: no-repeat; /* Prevent repeating the GIF */
+    background-position: center center; /* Center the GIF */
+    z-index: 9994; /* Below the pop-up but above the background */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+} /* <== Added the missing closing bracket */
+
+/* Dance GIF in the bottom left corner */
+.dance {
+    position: fixed;
+    bottom: -100px;
+    left: -200px;
+    width: 60%; /* Adjust size as needed */
+    height: 60%; /* Adjust size as needed */
+    background-image: url('dance.gif'); /* Replace with your dance GIF path */
+    background-size: contain; /* Ensure the entire GIF is visible */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center center; /* Center the GIF */
+    z-index: 9993; /* Below the pop-up but above the background */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+
+
+
+
+/* Avatar styling */
+.avatar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 500px;
+    z-index: 9996; /* Above petals */
+}
+
+/* Loading image styling */
+.loading {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 9996; /* Above petals */
+}
+
+/* Upload buttons container */
+.upload-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9996;
+}
+
+.upload {
+    width: 500px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Hidden video container */
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001; /* Above everything */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+video {
+    max-width: 500px;
+    max-height: 300px;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 9997; /* Ensure it's above the video */
+}
+
+.close-button:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+
+/* Position the GIF with EVIL number */
+.next_button {
+    position: fixed; /* Keeps it fixed at the bottom */
+    bottom: 0px;    /* 20px distance from the bottom */
+    left: 50%;       /* Align it to the center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 250px;    /* Adjust the size of the GIF */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 1000;   /* Ensure it stays above other elements */
+*/    opacity: 0.8;    */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Cute pink box style */
+.modal-content {
+    position: relative;
+    background: linear-gradient(45deg, #fc7988, #ffbd87 40%, #87ffd5 70%, #c299ff);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+}
+
+/* Text style */
+.modal-content p {
+    font-family: 'VT323', monospace;
+    font-size: 26px; /* Keep a smaller size for pixel effect */
+    color: #4f013f; /* Cute purple-pink color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a retro shadow effect */
+    letter-spacing: 1px; /* Slightly spaced letters for pixel style */
+}
+
+/* Button container */
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styles */
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'VT323', monospace;
+    background-color: #d8f3dc; /* Green pastel lime */
+    color: #000503;
+    box-shadow: 0 3px 6px rgba(0, 128, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#closeModal {
+    background-color: #87ffd5; /* Slightly lighter green pastel lime */
+}
+
+#nextGift {
+    background-color: #fc7988;
+}
+
+/* Button hover effects */
+#closeModal:hover {
+    background-color: #0ff7c9;
+    transform: scale(1.05);
+}
+
+#nextGift:hover {
+    background-color: #fa2e46;
+    transform: scale(1.05);
+}
+
+
+*/-------------------------------------------------------------------------------*/
+
+
+

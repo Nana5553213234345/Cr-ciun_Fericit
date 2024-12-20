@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png'); /* Replace with your GIF path */
+    background-size: cover; /* Ensure the GIF covers the entire screen */
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    background-position: center center; /* Center the GIF */
+    height: 100vh; /* Ensure it covers the full height of the screen */
+    overflow: hidden; /* Optional: Prevent scrolling if the GIF is too large */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+/* Pop-up styling (unchanged, remains above petals) */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 18888; /* Above petals */
+    cursor: pointer;
+}
+
+
+
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    border: 10px solid #d1a3ff;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    z-index: 5; /* Lower than .draggable */
+}
+
+
+.draggable {
+    position: absolute;
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+    user-select: none; /* Prevent text selection */
+    z-index: 10; /* Higher to ensure draggable images are on top */
+}
+
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);  /* 5 columns */
+    grid-template-rows: repeat(5, 100px);     /* 5 rows */
+    gap: 3px; /* Optional gap between tiles */
+    position: relative; /* Positioned relative to .container */
+    width: 510px;  /* 5 tiles * 100px + 4px gap */
+    height: 510px; /* 5 tiles * 100px + 4px gap */
+    z-index: 1; /* Lower to place puzzle in the background */
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-image: url('your-image.jpg');  /* Set your image here */
+    background-size: 500px 500px; /* Adjust according to the full image size */
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Inherits the z-index from #puzzle-container */
+}
+
+.rotated {
+    transition: transform 0.3s;
+}

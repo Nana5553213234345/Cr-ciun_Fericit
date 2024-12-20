@@ -1,0 +1,471 @@
+/* General Reset */
+body, h1, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* Position the GIF at the bottom of the page */
+.phone-gif, .phone-still {
+    position: fixed; /* Keeps it fixed at the bottom */
+    bottom: 120px;    /* 20px distance from the bottom */
+    left: 50%;       /* Align it to the center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 400px;    /* Adjust the size of the GIF */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 1000;   /* Ensure it stays above other elements */
+}
+
+/* Heart Rain GIF container */
+.heart_rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('heart_rain.gif'); /* Replace with your petals GIF path */
+    background-size: cover; /* Make sure the GIF covers the screen */
+    background-repeat: no-repeat; /* Prevent repeating the GIF */
+    background-position: center center; /* Center the GIF */
+    z-index: 0; /* Below the pop-up but above the background */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+    opacity: 0.5;
+}
+
+/* Position the GIF at the bottom of the page */
+.hello_kitty {
+    position: fixed; /* Keeps it fixed at the bottom */
+    bottom: 120px;    /* 20px distance from the bottom */
+    right: 10%;       /* Align it to the center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 400px;    /* Adjust the size of the GIF */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 10002;   /* Ensure it stays above other elements */
+}
+
+/* Position the GIF at the bottom of the page */
+.keychain {
+    position: fixed; /* Keeps it fixed at the bottom */
+    bottom: 120px;    /* 20px distance from the bottom */
+    left: 30%;       /* Align it to the center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 400px;    /* Adjust the size of the GIF */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 10002;   /* Ensure it stays above other elements */
+}
+
+
+
+/* Position the GIF with EVIL number */
+.satan-gif {
+    position: fixed; /* Keeps it fixed at the bottom */
+    bottom: 0px;    /* 20px distance from the bottom */
+    left: 50%;       /* Align it to the center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 200px;    /* Adjust the size of the GIF */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 1000;   /* Ensure it stays above other elements */
+    opacity: 0.8;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Evil fire effect for the modal content */
+.modal-content {
+    position: relative;
+    background: linear-gradient(45deg, red, orange, yellow);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.8), 0 0 50px rgba(255, 140, 0, 0.8);
+    animation: flicker 1.5s infinite alternate, glow 3s infinite alternate;
+}
+
+/* Flickering fire effect */
+@keyframes flicker {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(255, 69, 0, 0.6), 0 0 50px rgba(255, 140, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 69, 0, 0.8);
+    }
+}
+
+/* Subtle glowing effect */
+@keyframes glow {
+    0%, 100% {
+        border-color: rgba(255, 0, 0, 0.7);
+    }
+    50% {
+        border-color: rgba(255, 140, 0, 1);
+    }
+}
+
+/* Animated flames around the modal box */
+.modal-content:before, .modal-content:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    background: linear-gradient(transparent, rgba(255, 0, 0, 0.7), transparent);
+    border-radius: 15px;
+    z-index: -1;
+    animation: flames 2s infinite alternate-reverse;
+}
+
+.modal-content:after {
+    background: linear-gradient(transparent, rgba(255, 140, 0, 0.7), transparent);
+    animation-duration: 2.5s;
+}
+
+/* Flame animation */
+@keyframes flames {
+    0% {
+        transform: scale(1.2) rotate(0deg);
+        filter: blur(10px);
+    }
+    50% {
+        transform: scale(1.4) rotate(10deg);
+        filter: blur(15px);
+    }
+    100% {
+        transform: scale(1.2) rotate(-10deg);
+        filter: blur(10px);
+    }
+}
+
+/* Evil text style */
+.modal-content p {
+    font-family: 'Cinzel', serif; /* Choose an ominous font */
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347, 0 0 30px #ffa500;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif;
+}
+
+#closeModal {
+    background-color: #f0ae3c;
+    color: black;
+}
+
+#nextGift {
+    background-color: #ff4a26;
+    color: white;
+}
+
+#closeModal:hover {
+    background-color: #ffbb00;
+}
+
+#nextGift:hover {
+    background-color: #ff1900;
+}
+
+
+
+
+/* Fullscreen Pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10000; /* Ensure it covers everything */
+    cursor: pointer; /* Indicate that it is clickable */
+}
+
+/* Phone GIF and Still Image */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-top: 50px;
+}
+
+/* Fullscreen Pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10000; /* Ensure it covers everything */
+    cursor: pointer; /* Indicate that it is clickable */
+}
+
+/* Phone GIF and Still Image */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-top: 50px;
+}
+
+
+#videoPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    text-align: center;
+}
+#cinnamorollVideo {
+    max-width: 100%;
+    border: 2px solid #fff;
+}
+#closeVideoButton {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    z-index: 1;
+}
+
+/* Custom Pop-up Box for Caller Message */
+.caller-message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffce87;
+    width: 70%;
+    max-width: 600px;
+    display: none; /* Initially hidden */
+    text-align: center;
+    font-size: 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10001; /* Above other content */
+}
+
+/* Button Styles for the Caller Message Box */
+.caller-message-box button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #b3f4ff;
+    color: blue;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: 'Great Vibes', cursive; 
+    font-size: 3rem;
+}
+
+.caller-message-box button:hover {
+    background-color: #65b5b2; /* Darker pastel orange */
+}
+
+
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+
+/* Full-Screen Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Great Vibes', cursive;
+    overflow: hidden;
+    position: relative; /* This is needed for absolute positioning of characters */
+}
+
+/* Animated Pastel Rainbow Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, 
+        #FFDEE9, #B5FFFC, #FFB3BA, #FFFFBA, #B9FBC0
+    );
+    background-size: 400% 400%;
+    animation: moveBackground 10s infinite linear;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Sanrio Characters */
+.sanrio {
+    position: absolute;
+    width: 8rem; /* Adjust size as needed */
+    height: 8rem; /* Same height as width */
+    opacity: 0.7; /* Slight transparency */
+    animation: popAndShrink 5s infinite ease-in-out;
+    z-index: 1; /* Ensure it's above the background */
+}
+
+/* Sanrio Characters on the Left (3 characters) */
+.sanrio.left {
+    left: 5%; /* Position on the left side */
+    animation-delay: 0s; /* Optional: Delay the animation for different characters */
+}
+
+/* Sanrio Characters on the Right (3 characters) */
+.sanrio.right {
+    right: 5%; /* Position on the right side */
+    animation-delay: 0.5s; /* Optional: Delay the animation for different characters */
+}
+
+/* Specific Vertical Spacing for Left Characters */
+#Cinnamoroll {
+    top: 40%;
+}
+
+#Keroppi {
+    top: 10%; /* Same as Cinnamoroll */
+}
+
+#Pompompurin {
+    top: 70%; /* Keep this one lower */
+}
+
+/* Specific Vertical Spacing for Right Characters */
+#Kuromi {
+    top: 40%; /* Positioned in the middle */
+}
+
+#Mymelody {
+    top: 10%; /* Positioned in the middle (same as Kuromi) */
+}
+
+#tt {
+    top: 70%; /* Positioned lower on the right side */
+}
+
+/* Animation for popping up and shrinking */
+@keyframes popAndShrink {
+    0% {
+        transform: scale(1) translateY(0); /* Start at normal size */
+        opacity: 0.7;
+    }
+    25% {
+        transform: scale(1.2) translateY(-20px); /* Grow a bit */
+        opacity: 1; /* Full opacity */
+    }
+    50% {
+        transform: scale(1) translateY(0); /* Shrink back to normal size */
+        opacity: 0.7;
+    }
+    75% {
+        transform: scale(0.8) translateY(20px); /* Shrink a little */
+        opacity: 0.5; /* Lower opacity */
+    }
+    100% {
+        transform: scale(1) translateY(0); /* Back to normal */
+        opacity: 0.7;
+    }
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*/
+
+/* Updated Text Style */
+h1 {
+    font-size: 10rem; /* Bigger text */
+    color: #4B76FF; /* Brighter indigo-blue color */
+    text-align: center;
+    position: relative;
+    font-family: 'Great Vibes', cursive;
+}
+
+
